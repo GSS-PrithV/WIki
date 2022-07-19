@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create Page
+{% endblock %}
+
+{% block body %}
+
+    <div>
+        <form action="{% url 'create' %}" method="POST">
+            {{ createtemp }}
+            {% csrf_token %}
+            <input type="Submit" name="submit" value="Submit"/>
+        </form>
+    </div>
+{% endblock %}
